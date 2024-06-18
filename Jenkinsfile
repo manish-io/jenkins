@@ -1,12 +1,11 @@
 pipeline {
     agent any
-    
+
     stages {
         stage('Build Docker Image') {
             steps {
                 script {
-                    def dockerImage = docker.build('my-docker-image:latest', '-f Dockerfile .')
-                    
+                    sudo docker build -t my-docker-image -f Dockerfile .
                 }
             }
         }
