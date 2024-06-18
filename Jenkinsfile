@@ -5,7 +5,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
-                    sudo docker build -t my-docker-image -f Dockerfile .
+                    docker build -t my-docker-image -f Dockerfile .
                 }
             }
         }
