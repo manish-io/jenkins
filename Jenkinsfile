@@ -2,7 +2,7 @@ pipeline {
     agent {
         docker
     }
-    
+
     stages {
         stage('Build Docker Image') {
             steps {
@@ -12,7 +12,7 @@ pipeline {
             }
         }
     }
-    
+
     post {
         success {
             echo 'Build succeeded! Sending email notification...'
